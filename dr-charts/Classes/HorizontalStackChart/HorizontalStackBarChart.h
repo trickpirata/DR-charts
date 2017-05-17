@@ -45,6 +45,7 @@
 //set FONT property for the graph
 @property (nonatomic, strong) UIFont *textFont; //Default is [UIFont systemFontOfSize:textFontSize];
 @property (nonatomic, strong) UIColor *textColor; //Default is [UIColor blackColor]
+@property (nonatomic) CGFloat barOpacity;
 @property (nonatomic) CGFloat textFontSize; //Default is 12
 
 //show LEGEND with the graph

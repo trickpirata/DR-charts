@@ -40,6 +40,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        self.barOpacity = 0.7f;
         self.textFontSize = 12;
         self.textFont = [UIFont systemFontOfSize:self.textFontSize];
         self.textColor = [UIColor blackColor];
@@ -109,7 +110,7 @@
     [shapeLayer setPath:[[self drawArcWithValue:value] CGPath]];
     [shapeLayer setStrokeColor:color.CGColor];
     [shapeLayer setFillColor:color.CGColor];
-    [shapeLayer setOpacity:0.7f];
+    [shapeLayer setOpacity:self.barOpacity];
     [shapeLayer setLineWidth:1.0f];
     [shapeLayer setValue:[NSString stringWithFormat:@"%0.2f",value] forKey:@"data"];
     
