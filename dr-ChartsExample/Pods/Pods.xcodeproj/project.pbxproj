@@ -7,30 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F99135F2CB2A0EBC862CF80B32F7F1A /* LineGraphMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 119C6FAAA63C1E7B1976AEDD308633E4 /* LineGraphMarker.m */; };
-		2B72137CA1F282DD2CEA2254FEF77814 /* DRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D348C615241B0FB3B06472D5F60B367C /* DRScrollView.m */; };
-		2D4D560F48C9697AB9DBD11C25ACC2EF /* CATextLayer+AutoSizing.h in Headers */ = {isa = PBXBuildFile; fileRef = DF10152B95A26587B36475537771E6B2 /* CATextLayer+AutoSizing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F5E38F5785D4F91BBA067C0B86172F1 /* LegendView.h in Headers */ = {isa = PBXBuildFile; fileRef = 040365C213C1442A081B28F5745D27A3 /* LegendView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34250B3D695BBB542BFAD591E5EA4F3E /* PieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = D6086416432390B44C8DAB8B5EE78F9D /* PieChart.m */; };
-		3B551C140794C6EA71F810E1FAB33FB4 /* CircularChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5972D3B8381A3E36D9C1F97AD5C2D6 /* CircularChart.m */; };
-		3B9D0D85E1D4DCE15C39E434EC4F6B5F /* MultiLineGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = E8B4ACACF09A8F35022E2F2601588D58 /* MultiLineGraphView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E6FF5670D1BF864BEB402496C8C7466 /* DrGraphs.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB98118BBAAB737375A13F46DAA4D28 /* DrGraphs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7AA648128FC767DE479207864690CDCB /* BarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 071E1323DD7F278089C602D9D3CC0FCB /* BarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		86AB7D37B1D88FBC76B22C52F3385625 /* HorizontalStackBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F38379E6D45A1B89C535C0BEBF6B9B6 /* HorizontalStackBarChart.m */; };
-		924A35A4DFBC5370BAEF2E9CC2967134 /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = CE8D2866FD58E0209E1B4EB55F18D4EF /* Constants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09AE211A9A8204778F1862593B6921C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		1273BC47DAC1ADB165F0C9A48EC8307D /* LegendView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE86438CD181DAE92D444CF13FAD3984 /* LegendView.m */; };
+		3475647F6235D7759AA4F49CC7D00D0F /* LineGraphMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = A663FD652A73A51D91C89EE379E6846E /* LineGraphMarker.m */; };
+		3DB1DC09DC893A40B5521D900FBA6272 /* BarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB417F00CCEF777031AFEB64BE52913 /* BarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42E27B1D8D1678D17DC531C90513550B /* PieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1688AFCC9D4F28ACA623AB2B73C46452 /* PieChart.m */; };
+		4A930D9EE917AB4848DA9C185D8D264F /* HorizontalStackBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2FB73E1F834B92BE67F5D1C0FA320 /* HorizontalStackBarChart.m */; };
+		50C812D54B3A60BDEAED63B402DD0F49 /* MultiLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E56CD3DB093A9C6DD46E64352558642 /* MultiLineGraphView.m */; };
+		560DB4EEE5296DFF89676A6B0E95802F /* LineGraphMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = F1DEE6AA00308D28338E91B176D40DD1 /* LineGraphMarker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		564E4DE208AB612CCCFC05B7925D919E /* BarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EA125E0ABA381DCFD71244DA1BEC9D /* BarChart.m */; };
+		7A353675965BBC09A2E30F5C329593FA /* CircularChart.m in Sources */ = {isa = PBXBuildFile; fileRef = D646EC78698920F8A002E38CC22A4945 /* CircularChart.m */; };
+		7FF47E021ED57C5500D90564 /* CATextLayer+AutoSizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FF47E001ED57C5500D90564 /* CATextLayer+AutoSizing.h */; };
+		7FF47E031ED57C5500D90564 /* CATextLayer+AutoSizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF47E011ED57C5500D90564 /* CATextLayer+AutoSizing.m */; };
+		83215805BD8876DD8F414CB68A30B54B /* CircularChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 484ADB1A230C54A7182F8AEB8B4DFB95 /* CircularChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DF7E454135A825C87F19C9091CB5748 /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D2180EE94A23531DBAFF504CDE76F98 /* Constants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		952965556777E5D2A5F448DE8091B046 /* MultiLineGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = 421CAC964A650675DC75D23CFF40EF82 /* MultiLineGraphView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A6659AA8A812A4EFDF389A7C98921A4 /* DRScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4541C8A759D83B0828C43B57116EA4BF /* DRScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD790C88638E05690E73B3B2B34685BD /* Pods-drChartsExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AED1926117D00C9013D6C01046757E /* Pods-drChartsExample-dummy.m */; };
-		BCA8FEAC80F56F0A5A32C84E2FFD573A /* HorizontalStackBarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 9849CEF926DFD0038EB6D68123702654 /* HorizontalStackBarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BEA7B5E8DA41DAD8874B8E7980D22900 /* CATextLayer+AutoSizing.m in Sources */ = {isa = PBXBuildFile; fileRef = F45A4EF023DEFE94AE5BBA3B6D943EDB /* CATextLayer+AutoSizing.m */; };
-		C01AABA185BD49F3AA618DE9ED2CBF5E /* CircularChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C1ED0B63FE28F760F8F2F624137F3C /* CircularChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA8989451BE9C3834252B8FF7CB8F093 /* LegendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544CAF41F4BDE8DF4C000C55001C8A10 /* LegendView.m */; };
-		D07710623E42464AEE153DD2E4635C75 /* LineGraphMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = AD129AD2573E284D102959AF23FCB029 /* LineGraphMarker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5CE2C8236C0F0D6D1CC2ABAF6EC0C54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		AE37CB517BB1E6462BD1C4B652E4B4A0 /* PieChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EE8628F50EC29979A50A00194BD76BC /* PieChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C053B95FE4A7B870D030E96266B9F66F /* LegendView.h in Headers */ = {isa = PBXBuildFile; fileRef = A26421D8C584DECAFC7ACB7237BC8F69 /* LegendView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD5FECB25FC795DB7B19CCF311E45BEB /* DRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B56DCCBBE85BF9FC1BBD4EAE69D78E4 /* DRScrollView.m */; };
+		D23D3EBE4ACC12FFE372E6BD84016141 /* DrGraphs.h in Headers */ = {isa = PBXBuildFile; fileRef = D06943517D986FF3F45500501B6BEFE1 /* DrGraphs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8D2F83AF1A9B55DAB1756D836625B34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		D8D880F776AC798401AC877AF136605D /* drCharts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1142EDB3459861348FC9211111C7DEA /* drCharts-dummy.m */; };
-		E449C81B0901B6FD85A7E8B37A259E50 /* PieChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 432EFDBC55D6FAD9422732563C32319B /* PieChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB74F428997135BD54CF6FC425ED0D42 /* DRScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F117DF5E8330825A47330754029AF2A /* DRScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F50AF7DEB205A8963F3615CFF930CB80 /* BarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CEB182CD722A5CEA82EE02BF5B9AEE /* BarChart.m */; };
-		F93B57414AA82A1A3C4B50C758EF8B35 /* MultiLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C8FE2A692DBB06578DCF5F6912D0BC /* MultiLineGraphView.m */; };
+		F456553FA8D3B2DD11BCD220AE5C0936 /* HorizontalStackBarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BFA7C3C90B0D67E0010E7C27470D1FE /* HorizontalStackBarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F81BE1B17658EF64E05226A96D71C7EF /* drCharts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1142EDB3459861348FC9211111C7DEA /* drCharts-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,46 +38,46 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CA10EBD2094DF436B55BBAC31478CCE0;
+			remoteGlobalIDString = E3CD20169379066A6CB49B68E201DFE5;
 			remoteInfo = drCharts;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		040365C213C1442A081B28F5745D27A3 /* LegendView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LegendView.h; sourceTree = "<group>"; };
-		071E1323DD7F278089C602D9D3CC0FCB /* BarChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BarChart.h; sourceTree = "<group>"; };
-		119C6FAAA63C1E7B1976AEDD308633E4 /* LineGraphMarker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LineGraphMarker.m; sourceTree = "<group>"; };
-		1B5972D3B8381A3E36D9C1F97AD5C2D6 /* CircularChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CircularChart.m; sourceTree = "<group>"; };
-		24C1ED0B63FE28F760F8F2F624137F3C /* CircularChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CircularChart.h; sourceTree = "<group>"; };
+		1688AFCC9D4F28ACA623AB2B73C46452 /* PieChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PieChart.m; sourceTree = "<group>"; };
+		1BFA7C3C90B0D67E0010E7C27470D1FE /* HorizontalStackBarChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HorizontalStackBarChart.h; sourceTree = "<group>"; };
 		2DC39B9E0D29BFFEE005C06250F4A9CB /* Pods-drChartsExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-drChartsExample-resources.sh"; sourceTree = "<group>"; };
-		432EFDBC55D6FAD9422732563C32319B /* PieChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PieChart.h; sourceTree = "<group>"; };
-		50CEB182CD722A5CEA82EE02BF5B9AEE /* BarChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BarChart.m; sourceTree = "<group>"; };
-		544CAF41F4BDE8DF4C000C55001C8A10 /* LegendView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LegendView.m; sourceTree = "<group>"; };
+		421CAC964A650675DC75D23CFF40EF82 /* MultiLineGraphView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MultiLineGraphView.h; sourceTree = "<group>"; };
+		4541C8A759D83B0828C43B57116EA4BF /* DRScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DRScrollView.h; sourceTree = "<group>"; };
+		484ADB1A230C54A7182F8AEB8B4DFB95 /* CircularChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CircularChart.h; sourceTree = "<group>"; };
+		4AB417F00CCEF777031AFEB64BE52913 /* BarChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BarChart.h; sourceTree = "<group>"; };
 		5A3B5556E73E2ABDFDEE87C0D14F92B3 /* drCharts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = drCharts.xcconfig; sourceTree = "<group>"; };
-		5F117DF5E8330825A47330754029AF2A /* DRScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DRScrollView.h; sourceTree = "<group>"; };
-		5F38379E6D45A1B89C535C0BEBF6B9B6 /* HorizontalStackBarChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HorizontalStackBarChart.m; sourceTree = "<group>"; };
+		5D2180EE94A23531DBAFF504CDE76F98 /* Constants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		5DC2FB73E1F834B92BE67F5D1C0FA320 /* HorizontalStackBarChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HorizontalStackBarChart.m; sourceTree = "<group>"; };
+		5E56CD3DB093A9C6DD46E64352558642 /* MultiLineGraphView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MultiLineGraphView.m; sourceTree = "<group>"; };
 		62D6304EA9B50D0BA1BD61E48B39BD71 /* Pods-drChartsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-drChartsExample.release.xcconfig"; sourceTree = "<group>"; };
+		71EA125E0ABA381DCFD71244DA1BEC9D /* BarChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BarChart.m; sourceTree = "<group>"; };
 		78A87C94945AEE2F011A94F963602F5E /* Pods-drChartsExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-drChartsExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7FF47E001ED57C5500D90564 /* CATextLayer+AutoSizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATextLayer+AutoSizing.h"; sourceTree = "<group>"; };
+		7FF47E011ED57C5500D90564 /* CATextLayer+AutoSizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATextLayer+AutoSizing.m"; sourceTree = "<group>"; };
 		913C0ECC1E0AC28B484AB135139D45EF /* Pods-drChartsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-drChartsExample.debug.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9849CEF926DFD0038EB6D68123702654 /* HorizontalStackBarChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HorizontalStackBarChart.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B56DCCBBE85BF9FC1BBD4EAE69D78E4 /* DRScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DRScrollView.m; sourceTree = "<group>"; };
+		9EE8628F50EC29979A50A00194BD76BC /* PieChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PieChart.h; sourceTree = "<group>"; };
 		A1142EDB3459861348FC9211111C7DEA /* drCharts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "drCharts-dummy.m"; sourceTree = "<group>"; };
-		AD129AD2573E284D102959AF23FCB029 /* LineGraphMarker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LineGraphMarker.h; sourceTree = "<group>"; };
+		A26421D8C584DECAFC7ACB7237BC8F69 /* LegendView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LegendView.h; sourceTree = "<group>"; };
+		A663FD652A73A51D91C89EE379E6846E /* LineGraphMarker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LineGraphMarker.m; sourceTree = "<group>"; };
 		B1AED1926117D00C9013D6C01046757E /* Pods-drChartsExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-drChartsExample-dummy.m"; sourceTree = "<group>"; };
 		B2BCA67613E563B0B3F2D59F8D4398DC /* Pods-drChartsExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-drChartsExample-acknowledgements.plist"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CE8D2866FD58E0209E1B4EB55F18D4EF /* Constants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		D348C615241B0FB3B06472D5F60B367C /* DRScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DRScrollView.m; sourceTree = "<group>"; };
-		D3C8FE2A692DBB06578DCF5F6912D0BC /* MultiLineGraphView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MultiLineGraphView.m; sourceTree = "<group>"; };
-		D6086416432390B44C8DAB8B5EE78F9D /* PieChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PieChart.m; sourceTree = "<group>"; };
+		D06943517D986FF3F45500501B6BEFE1 /* DrGraphs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DrGraphs.h; sourceTree = "<group>"; };
+		D646EC78698920F8A002E38CC22A4945 /* CircularChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CircularChart.m; sourceTree = "<group>"; };
 		DE665B09C39C1B58BE20AD10740A27EC /* Pods-drChartsExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-drChartsExample-frameworks.sh"; sourceTree = "<group>"; };
-		DF10152B95A26587B36475537771E6B2 /* CATextLayer+AutoSizing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CATextLayer+AutoSizing.h"; sourceTree = "<group>"; };
-		E42172B472A0DCEA277E8D696842E0A3 /* libdrCharts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libdrCharts.a; path = libdrCharts.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8B4ACACF09A8F35022E2F2601588D58 /* MultiLineGraphView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MultiLineGraphView.h; sourceTree = "<group>"; };
+		E42172B472A0DCEA277E8D696842E0A3 /* libdrCharts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdrCharts.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE86438CD181DAE92D444CF13FAD3984 /* LegendView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LegendView.m; sourceTree = "<group>"; };
 		EEE273FAABC012560F9160EDFDEF3B75 /* drCharts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "drCharts-prefix.pch"; sourceTree = "<group>"; };
-		F45A4EF023DEFE94AE5BBA3B6D943EDB /* CATextLayer+AutoSizing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CATextLayer+AutoSizing.m"; sourceTree = "<group>"; };
-		FA073134A18D3A3FF0DD2571372B7781 /* libPods-drChartsExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-drChartsExample.a"; path = "libPods-drChartsExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFB98118BBAAB737375A13F46DAA4D28 /* DrGraphs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DrGraphs.h; sourceTree = "<group>"; };
+		F1DEE6AA00308D28338E91B176D40DD1 /* LineGraphMarker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LineGraphMarker.h; sourceTree = "<group>"; };
+		FA073134A18D3A3FF0DD2571372B7781 /* libPods-drChartsExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-drChartsExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +89,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5ACB293B818D4E62E4951F887050ABD7 /* Frameworks */ = {
+		71A035415CAFE1BD9BFF4CFD6CFCD5F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5CE2C8236C0F0D6D1CC2ABAF6EC0C54 /* Foundation.framework in Frameworks */,
+				09AE211A9A8204778F1862593B6921C4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,14 +115,23 @@
 			path = "Target Support Files/Pods-drChartsExample";
 			sourceTree = "<group>";
 		};
-		0A0B15CF3DB9EF398C34B6E7ADEC9EB7 /* Legend */ = {
+		27272BC8988859E9E33F18E40DA7C4C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				040365C213C1442A081B28F5745D27A3 /* LegendView.h */,
-				544CAF41F4BDE8DF4C000C55001C8A10 /* LegendView.m */,
+				7FF47E001ED57C5500D90564 /* CATextLayer+AutoSizing.h */,
+				7FF47E011ED57C5500D90564 /* CATextLayer+AutoSizing.m */,
+				5D2180EE94A23531DBAFF504CDE76F98 /* Constants.h */,
+				D06943517D986FF3F45500501B6BEFE1 /* DrGraphs.h */,
+				4541C8A759D83B0828C43B57116EA4BF /* DRScrollView.h */,
+				9B56DCCBBE85BF9FC1BBD4EAE69D78E4 /* DRScrollView.m */,
+				F4F8C79A7C6A32137FCA6E863C628C4B /* BarChart */,
+				BDFCA804291787D2592BDCB4EA17A4DB /* CircularChart */,
+				66CE3E17076D2EACD67020D2F930AA95 /* HorizontalStackChart */,
+				F910B55DCF1E4489BAEE7A0CE70C1FCB /* Legend */,
+				FA2D186DFDE1072CCAA3DF77AC08B1C2 /* LineChart */,
+				C32D5FEA8EBC20991D8CFBCEDCC1B657 /* PieChart */,
 			);
-			name = Legend;
-			path = Legend;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		2D38F0E5D3DC9D2972C3A34FFA5FF043 /* Development Pods */ = {
@@ -133,56 +142,21 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		307BF5091D48C220DD90E4393E40851B /* CircularChart */ = {
+		62FC56B3966FE45F7FFDEE18B3E7B755 /* dr-Charts */ = {
 			isa = PBXGroup;
 			children = (
-				24C1ED0B63FE28F760F8F2F624137F3C /* CircularChart.h */,
-				1B5972D3B8381A3E36D9C1F97AD5C2D6 /* CircularChart.m */,
+				27272BC8988859E9E33F18E40DA7C4C0 /* Classes */,
 			);
-			name = CircularChart;
-			path = CircularChart;
+			path = "dr-Charts";
 			sourceTree = "<group>";
 		};
-		3E3027B436336CDFDF206C647B9152E0 /* BarChart */ = {
+		66CE3E17076D2EACD67020D2F930AA95 /* HorizontalStackChart */ = {
 			isa = PBXGroup;
 			children = (
-				071E1323DD7F278089C602D9D3CC0FCB /* BarChart.h */,
-				50CEB182CD722A5CEA82EE02BF5B9AEE /* BarChart.m */,
+				1BFA7C3C90B0D67E0010E7C27470D1FE /* HorizontalStackBarChart.h */,
+				5DC2FB73E1F834B92BE67F5D1C0FA320 /* HorizontalStackBarChart.m */,
 			);
-			name = BarChart;
-			path = BarChart;
-			sourceTree = "<group>";
-		};
-		56C40F79ECC2D9D2DB1BD9D8AD9A9D96 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				DF10152B95A26587B36475537771E6B2 /* CATextLayer+AutoSizing.h */,
-				F45A4EF023DEFE94AE5BBA3B6D943EDB /* CATextLayer+AutoSizing.m */,
-				CE8D2866FD58E0209E1B4EB55F18D4EF /* Constants.h */,
-				FFB98118BBAAB737375A13F46DAA4D28 /* DrGraphs.h */,
-				5F117DF5E8330825A47330754029AF2A /* DRScrollView.h */,
-				D348C615241B0FB3B06472D5F60B367C /* DRScrollView.m */,
-				3E3027B436336CDFDF206C647B9152E0 /* BarChart */,
-				307BF5091D48C220DD90E4393E40851B /* CircularChart */,
-				FF38E61FB98C04CB0F3E2FB1DE720D31 /* HorizontalStackChart */,
-				0A0B15CF3DB9EF398C34B6E7ADEC9EB7 /* Legend */,
-				5AD91BA9FC9A178D4CF7D96F0934108A /* LineChart */,
-				9524009780402BDC87A56C828354B596 /* PieChart */,
-			);
-			name = Classes;
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		5AD91BA9FC9A178D4CF7D96F0934108A /* LineChart */ = {
-			isa = PBXGroup;
-			children = (
-				AD129AD2573E284D102959AF23FCB029 /* LineGraphMarker.h */,
-				119C6FAAA63C1E7B1976AEDD308633E4 /* LineGraphMarker.m */,
-				E8B4ACACF09A8F35022E2F2601588D58 /* MultiLineGraphView.h */,
-				D3C8FE2A692DBB06578DCF5F6912D0BC /* MultiLineGraphView.m */,
-			);
-			name = LineChart;
-			path = LineChart;
+			path = HorizontalStackChart;
 			sourceTree = "<group>";
 		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
@@ -207,7 +181,7 @@
 		7DC6558052E7890C62259F296A28B358 /* drCharts */ = {
 			isa = PBXGroup;
 			children = (
-				EFD4C18A228BB6416C1DA0529FA3E7EB /* dr-Charts */,
+				62FC56B3966FE45F7FFDEE18B3E7B755 /* dr-Charts */,
 				ABF66FA4EB9ABA8EDEA673A292EA670B /* Support Files */,
 			);
 			name = drCharts;
@@ -221,16 +195,6 @@
 				FA073134A18D3A3FF0DD2571372B7781 /* libPods-drChartsExample.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		9524009780402BDC87A56C828354B596 /* PieChart */ = {
-			isa = PBXGroup;
-			children = (
-				432EFDBC55D6FAD9422732563C32319B /* PieChart.h */,
-				D6086416432390B44C8DAB8B5EE78F9D /* PieChart.m */,
-			);
-			name = PieChart;
-			path = PieChart;
 			sourceTree = "<group>";
 		};
 		ABF66FA4EB9ABA8EDEA673A292EA670B /* Support Files */ = {
@@ -252,6 +216,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BDFCA804291787D2592BDCB4EA17A4DB /* CircularChart */ = {
+			isa = PBXGroup;
+			children = (
+				484ADB1A230C54A7182F8AEB8B4DFB95 /* CircularChart.h */,
+				D646EC78698920F8A002E38CC22A4945 /* CircularChart.m */,
+			);
+			path = CircularChart;
+			sourceTree = "<group>";
+		};
+		C32D5FEA8EBC20991D8CFBCEDCC1B657 /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				9EE8628F50EC29979A50A00194BD76BC /* PieChart.h */,
+				1688AFCC9D4F28ACA623AB2B73C46452 /* PieChart.m */,
+			);
+			path = PieChart;
+			sourceTree = "<group>";
+		};
 		E09DB964FD6B5618165F57E819863EE5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,56 +242,66 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EFD4C18A228BB6416C1DA0529FA3E7EB /* dr-Charts */ = {
+		F4F8C79A7C6A32137FCA6E863C628C4B /* BarChart */ = {
 			isa = PBXGroup;
 			children = (
-				56C40F79ECC2D9D2DB1BD9D8AD9A9D96 /* Classes */,
+				4AB417F00CCEF777031AFEB64BE52913 /* BarChart.h */,
+				71EA125E0ABA381DCFD71244DA1BEC9D /* BarChart.m */,
 			);
-			name = "dr-Charts";
-			path = "dr-Charts";
+			path = BarChart;
 			sourceTree = "<group>";
 		};
-		FF38E61FB98C04CB0F3E2FB1DE720D31 /* HorizontalStackChart */ = {
+		F910B55DCF1E4489BAEE7A0CE70C1FCB /* Legend */ = {
 			isa = PBXGroup;
 			children = (
-				9849CEF926DFD0038EB6D68123702654 /* HorizontalStackBarChart.h */,
-				5F38379E6D45A1B89C535C0BEBF6B9B6 /* HorizontalStackBarChart.m */,
+				A26421D8C584DECAFC7ACB7237BC8F69 /* LegendView.h */,
+				EE86438CD181DAE92D444CF13FAD3984 /* LegendView.m */,
 			);
-			name = HorizontalStackChart;
-			path = HorizontalStackChart;
+			path = Legend;
+			sourceTree = "<group>";
+		};
+		FA2D186DFDE1072CCAA3DF77AC08B1C2 /* LineChart */ = {
+			isa = PBXGroup;
+			children = (
+				F1DEE6AA00308D28338E91B176D40DD1 /* LineGraphMarker.h */,
+				A663FD652A73A51D91C89EE379E6846E /* LineGraphMarker.m */,
+				421CAC964A650675DC75D23CFF40EF82 /* MultiLineGraphView.h */,
+				5E56CD3DB093A9C6DD46E64352558642 /* MultiLineGraphView.m */,
+			);
+			path = LineChart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F9223EF8AC6B2DF48BAD7E0A1C570009 /* Headers */ = {
+		DE86822E2BA9F75779724804BB1B9F48 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AA648128FC767DE479207864690CDCB /* BarChart.h in Headers */,
-				2D4D560F48C9697AB9DBD11C25ACC2EF /* CATextLayer+AutoSizing.h in Headers */,
-				C01AABA185BD49F3AA618DE9ED2CBF5E /* CircularChart.h in Headers */,
-				924A35A4DFBC5370BAEF2E9CC2967134 /* Constants.h in Headers */,
-				3E6FF5670D1BF864BEB402496C8C7466 /* DrGraphs.h in Headers */,
-				EB74F428997135BD54CF6FC425ED0D42 /* DRScrollView.h in Headers */,
-				BCA8FEAC80F56F0A5A32C84E2FFD573A /* HorizontalStackBarChart.h in Headers */,
-				2F5E38F5785D4F91BBA067C0B86172F1 /* LegendView.h in Headers */,
-				D07710623E42464AEE153DD2E4635C75 /* LineGraphMarker.h in Headers */,
-				3B9D0D85E1D4DCE15C39E434EC4F6B5F /* MultiLineGraphView.h in Headers */,
-				E449C81B0901B6FD85A7E8B37A259E50 /* PieChart.h in Headers */,
+				3DB1DC09DC893A40B5521D900FBA6272 /* BarChart.h in Headers */,
+				83215805BD8876DD8F414CB68A30B54B /* CircularChart.h in Headers */,
+				8DF7E454135A825C87F19C9091CB5748 /* Constants.h in Headers */,
+				D23D3EBE4ACC12FFE372E6BD84016141 /* DrGraphs.h in Headers */,
+				9A6659AA8A812A4EFDF389A7C98921A4 /* DRScrollView.h in Headers */,
+				F456553FA8D3B2DD11BCD220AE5C0936 /* HorizontalStackBarChart.h in Headers */,
+				7FF47E021ED57C5500D90564 /* CATextLayer+AutoSizing.h in Headers */,
+				C053B95FE4A7B870D030E96266B9F66F /* LegendView.h in Headers */,
+				560DB4EEE5296DFF89676A6B0E95802F /* LineGraphMarker.h in Headers */,
+				952965556777E5D2A5F448DE8091B046 /* MultiLineGraphView.h in Headers */,
+				AE37CB517BB1E6462BD1C4B652E4B4A0 /* PieChart.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CA10EBD2094DF436B55BBAC31478CCE0 /* drCharts */ = {
+		E3CD20169379066A6CB49B68E201DFE5 /* drCharts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64EF89ABD6810296076B84A6EC352F10 /* Build configuration list for PBXNativeTarget "drCharts" */;
+			buildConfigurationList = 29BA61AF4FCB2E42F3600A60728E8117 /* Build configuration list for PBXNativeTarget "drCharts" */;
 			buildPhases = (
-				FD63D870C42CC923F57C1204811234BF /* Sources */,
-				5ACB293B818D4E62E4951F887050ABD7 /* Frameworks */,
-				F9223EF8AC6B2DF48BAD7E0A1C570009 /* Headers */,
+				BE5060B91AA342E75C23318A15F5E1B5 /* Sources */,
+				71A035415CAFE1BD9BFF4CFD6CFCD5F9 /* Frameworks */,
+				DE86822E2BA9F75779724804BB1B9F48 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -358,7 +350,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CA10EBD2094DF436B55BBAC31478CCE0 /* drCharts */,
+				E3CD20169379066A6CB49B68E201DFE5 /* drCharts */,
 				F9DCF5D7E6B8530067DCC91BD8A44349 /* Pods-drChartsExample */,
 			);
 		};
@@ -373,20 +365,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD63D870C42CC923F57C1204811234BF /* Sources */ = {
+		BE5060B91AA342E75C23318A15F5E1B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F50AF7DEB205A8963F3615CFF930CB80 /* BarChart.m in Sources */,
-				BEA7B5E8DA41DAD8874B8E7980D22900 /* CATextLayer+AutoSizing.m in Sources */,
-				3B551C140794C6EA71F810E1FAB33FB4 /* CircularChart.m in Sources */,
-				D8D880F776AC798401AC877AF136605D /* drCharts-dummy.m in Sources */,
-				2B72137CA1F282DD2CEA2254FEF77814 /* DRScrollView.m in Sources */,
-				86AB7D37B1D88FBC76B22C52F3385625 /* HorizontalStackBarChart.m in Sources */,
-				CA8989451BE9C3834252B8FF7CB8F093 /* LegendView.m in Sources */,
-				1F99135F2CB2A0EBC862CF80B32F7F1A /* LineGraphMarker.m in Sources */,
-				F93B57414AA82A1A3C4B50C758EF8B35 /* MultiLineGraphView.m in Sources */,
-				34250B3D695BBB542BFAD591E5EA4F3E /* PieChart.m in Sources */,
+				564E4DE208AB612CCCFC05B7925D919E /* BarChart.m in Sources */,
+				7A353675965BBC09A2E30F5C329593FA /* CircularChart.m in Sources */,
+				F81BE1B17658EF64E05226A96D71C7EF /* drCharts-dummy.m in Sources */,
+				7FF47E031ED57C5500D90564 /* CATextLayer+AutoSizing.m in Sources */,
+				CD5FECB25FC795DB7B19CCF311E45BEB /* DRScrollView.m in Sources */,
+				4A930D9EE917AB4848DA9C185D8D264F /* HorizontalStackBarChart.m in Sources */,
+				1273BC47DAC1ADB165F0C9A48EC8307D /* LegendView.m in Sources */,
+				3475647F6235D7759AA4F49CC7D00D0F /* LineGraphMarker.m in Sources */,
+				50C812D54B3A60BDEAED63B402DD0F49 /* MultiLineGraphView.m in Sources */,
+				42E27B1D8D1678D17DC531C90513550B /* PieChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +388,7 @@
 		ACF41A89292981C9D468F5415531D1FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = drCharts;
-			target = CA10EBD2094DF436B55BBAC31478CCE0 /* drCharts */;
+			target = E3CD20169379066A6CB49B68E201DFE5 /* drCharts */;
 			targetProxy = 4BEEEC3A642F8AE1586473CB658F5F49 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -425,19 +417,19 @@
 			};
 			name = Debug;
 		};
-		438C0586398A8554E0AC2D5E74CCC379 /* Debug */ = {
+		55B7469AE49C48CF284CF64A00CE69C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A3B5556E73E2ABDFDEE87C0D14F92B3 /* drCharts.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/drCharts/drCharts-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -446,7 +438,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		79B0C2E66EFA9917ED6EDDB8FC6A7684 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -487,6 +479,29 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		8D3608FDA90F99FA3D1CF84660DF956C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A3B5556E73E2ABDFDEE87C0D14F92B3 /* drCharts.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/drCharts/drCharts-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 		A2A7F7BAEC2086BBF72B94CBCB464A8E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -555,32 +570,18 @@
 			};
 			name = Debug;
 		};
-		DDDA7676B20FC0624C580C4241D459FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A3B5556E73E2ABDFDEE87C0D14F92B3 /* drCharts.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/drCharts/drCharts-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		29BA61AF4FCB2E42F3600A60728E8117 /* Build configuration list for PBXNativeTarget "drCharts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D3608FDA90F99FA3D1CF84660DF956C /* Debug */,
+				55B7469AE49C48CF284CF64A00CE69C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -595,15 +596,6 @@
 			buildConfigurations = (
 				19D0BF6717E621A2027B002BBACC27C1 /* Debug */,
 				A2A7F7BAEC2086BBF72B94CBCB464A8E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		64EF89ABD6810296076B84A6EC352F10 /* Build configuration list for PBXNativeTarget "drCharts" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				438C0586398A8554E0AC2D5E74CCC379 /* Debug */,
-				DDDA7676B20FC0624C580C4241D459FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

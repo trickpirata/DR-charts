@@ -8,7 +8,7 @@
 
 #import "HorizontalStackBarChart.h"
 #import "Constants.h"
-#import <CoreText/CoreText.h>
+#import "CATextLayer+AutoSizing.h"
 
 @interface HorizontalStackBarData : NSObject
 
@@ -138,10 +138,18 @@
     NSAttributedString *attrString = [LegendView getAttributedString:text withFont:self.textFont];
     CGSize size = [attrString boundingRectWithSize:CGSizeMake(WIDTH(self), MAXFLOAT) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size;
     
-    if (size.height < layerRect.size.height && (size.width - OFFSET_TEXT) < layerRect.size.width && self.showValueOnBarSlice) {
+    CGFloat fontSize = self.textFontSize;
+    while (size.width > layerRect.size.width) {
+        fontSize -= 0.1f;
+        attrString = [LegendView getAttributedString:text withFont:[UIFont fontWithName:self.textFont.fontName size:fontSize]];
+        size = [attrString boundingRectWithSize:CGSizeMake(WIDTH(self), MAXFLOAT) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+    }
+    
+    if (size.height < layerRect.size.height && size.width < layerRect.size.width && self.showValueOnBarSlice) {
+        
         CATextLayer *textLayer = [[CATextLayer alloc] init];
         [textLayer setFont:CFBridgingRetain(self.textFont.fontName)];
-        [textLayer setFontSize:self.textFontSize];
+        [textLayer setFontSize:fontSize];
         [textLayer setFrame:CGRectMake(layerRect.origin.x + layerRect.size.width/2 - size.width/2, layerRect.origin.y + layerRect.size.height/2 - size.height/2, size.width, size.height)];
         [textLayer setString:[NSString stringWithFormat:@"%@",text]];
         [textLayer setTruncationMode:kCATruncationEnd];
@@ -151,9 +159,7 @@
         [textLayer setShouldRasterize:YES];
         [textLayer setRasterizationScale:[[UIScreen mainScreen] scale]];
         [textLayer setContentsScale:[[UIScreen mainScreen] scale]];
-        CGRect old = textLayer.frame;
-        [self adjustBoundsToFit:textLayer];
-        NSLog(@"\nOLDs - %@\nNews -  %@", NSStringFromCGRect(old), NSStringFromCGRect(textLayer.frame));
+        [textLayer adjustBoundsToFit];
         [shapeLayer addSublayer:textLayer];
     }
 
@@ -162,42 +168,6 @@
     [CATransaction commit];
     
     [self.barView.layer addSublayer:shapeLayer];
-}
-
-- (void) adjustBoundsToFit:(CATextLayer *)layer {
-    NSAttributedString *as;
-    if([layer.string isKindOfClass:[NSAttributedString class]]) {
-        as = layer.string;
-    } else {
-        
-        UIFont *outfont;
-        CFTypeRef layerfont = layer.font;
-        if(layerfont && [(__bridge id) layerfont isKindOfClass:[NSString class]]) {
-            outfont = [UIFont fontWithName:(__bridge NSString*)layerfont size:layer.fontSize];
-        } else {
-            CFTypeID ftypeid = CFGetTypeID(layerfont);
-            if(ftypeid == CTFontGetTypeID()) {
-                CFStringRef fname = CTFontCopyPostScriptName(layerfont);
-                outfont = [UIFont fontWithName:(__bridge NSString*)fname size:layer.fontSize];
-                CFRelease(fname);
-            }
-            else if (ftypeid == CGFontGetTypeID()) {
-                CFStringRef fname = CGFontCopyPostScriptName((CGFontRef)layerfont);
-                outfont = [UIFont fontWithName:(__bridge NSString*)fname size:layer.fontSize];
-                CFRelease(fname);
-                
-            }
-            else { // It's undefined, and defaults to Helvetica
-                outfont = [UIFont systemFontOfSize:layer.fontSize];
-            }
-        }
-        
-        as = [[NSAttributedString alloc] initWithString:layer.string attributes:@{NSFontAttributeName: outfont}];
-    }
-    
-    CGRect f = layer.frame;
-    f.size = [as size];
-    layer.frame = f;
 }
 
 - (UIBezierPath *)drawArcWithValue:(CGFloat)value{

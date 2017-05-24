@@ -5,20 +5,22 @@
 //  Created by Patrick Gorospe on 5/24/17.
 //
 //
-#import <UIKit/UIKit.h>
-#import <CoreText/CoreText.h>
+
 #import "CATextLayer+AutoSizing.h"
+#import <CoreText/CoreText.h>
 
 @implementation CATextLayer (AutoSizing)
 
 - (void) adjustBoundsToFit {
+    
     NSAttributedString *as;
     if([self.string isKindOfClass:[NSAttributedString class]]) {
         as = self.string;
     } else {
         
-        UIFont *outfont;
+        UIFont* outfont;
         CFTypeRef layerfont = self.font;
+        
         if(layerfont && [(__bridge id) layerfont isKindOfClass:[NSString class]]) {
             outfont = [UIFont fontWithName:(__bridge NSString*)layerfont size:self.fontSize];
         } else {
