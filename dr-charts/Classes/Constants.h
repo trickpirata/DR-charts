@@ -22,7 +22,7 @@
 #define OFFSET_X 30
 #define OFFSET_Y 30
 #define OFFSET_PADDING 5
-#define OFFSET_TEXT 2.0f
+#define OFFSET_TEXT 5.0f
 
 #define DEG2RAD(angle) angle*M_PI/180.0
 
