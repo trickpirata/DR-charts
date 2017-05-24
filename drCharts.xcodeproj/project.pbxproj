@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1B5B171ED5646400CF1895 /* CATextLayer+AutoSizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F1B5B151ED5646400CF1895 /* CATextLayer+AutoSizing.h */; };
+		7F1B5B181ED5646400CF1895 /* CATextLayer+AutoSizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B5B161ED5646400CF1895 /* CATextLayer+AutoSizing.m */; };
 		C50CCB231D0EA0AB002C87B7 /* drCharts.h in Headers */ = {isa = PBXBuildFile; fileRef = C50CCB221D0EA0AB002C87B7 /* drCharts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C50CCB2A1D0EA0AB002C87B7 /* drCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50CCB1F1D0EA0AB002C87B7 /* drCharts.framework */; };
 		C50CCB2F1D0EA0AB002C87B7 /* drChartsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C50CCB2E1D0EA0AB002C87B7 /* drChartsTests.m */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F1B5B151ED5646400CF1895 /* CATextLayer+AutoSizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATextLayer+AutoSizing.h"; sourceTree = "<group>"; };
+		7F1B5B161ED5646400CF1895 /* CATextLayer+AutoSizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATextLayer+AutoSizing.m"; sourceTree = "<group>"; };
 		C50CCB1F1D0EA0AB002C87B7 /* drCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = drCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50CCB221D0EA0AB002C87B7 /* drCharts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drCharts.h; sourceTree = "<group>"; };
 		C50CCB241D0EA0AB002C87B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,14 +134,16 @@
 			children = (
 				C50CCB3A1D0EA0D3002C87B7 /* BarChart */,
 				C50CCB3D1D0EA0D3002C87B7 /* CircularChart */,
-				C50CCB401D0EA0D3002C87B7 /* Constants.h */,
-				C50CCB411D0EA0D3002C87B7 /* DrGraphs.h */,
-				C50CCB421D0EA0D3002C87B7 /* DRScrollView.h */,
-				C50CCB431D0EA0D3002C87B7 /* DRScrollView.m */,
 				C50CCB441D0EA0D3002C87B7 /* HorizontalStackChart */,
 				C50CCB471D0EA0D3002C87B7 /* Legend */,
 				C50CCB4A1D0EA0D3002C87B7 /* LineChart */,
 				C50CCB4F1D0EA0D3002C87B7 /* PieChart */,
+				7F1B5B151ED5646400CF1895 /* CATextLayer+AutoSizing.h */,
+				7F1B5B161ED5646400CF1895 /* CATextLayer+AutoSizing.m */,
+				C50CCB401D0EA0D3002C87B7 /* Constants.h */,
+				C50CCB411D0EA0D3002C87B7 /* DrGraphs.h */,
+				C50CCB421D0EA0D3002C87B7 /* DRScrollView.h */,
+				C50CCB431D0EA0D3002C87B7 /* DRScrollView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 				C50CCB581D0EA0D3002C87B7 /* DRScrollView.h in Headers */,
 				C50CCB5E1D0EA0D3002C87B7 /* LineGraphMarker.h in Headers */,
 				C50CCB541D0EA0D3002C87B7 /* CircularChart.h in Headers */,
+				7F1B5B171ED5646400CF1895 /* CATextLayer+AutoSizing.h in Headers */,
 				C50CCB571D0EA0D3002C87B7 /* DrGraphs.h in Headers */,
 				C50CCB621D0EA0D3002C87B7 /* PieChart.h in Headers */,
 				C50CCB231D0EA0AB002C87B7 /* drCharts.h in Headers */,
@@ -320,6 +327,7 @@
 				C50CCB5D1D0EA0D3002C87B7 /* LegendView.m in Sources */,
 				C50CCB551D0EA0D3002C87B7 /* CircularChart.m in Sources */,
 				C50CCB5F1D0EA0D3002C87B7 /* LineGraphMarker.m in Sources */,
+				7F1B5B181ED5646400CF1895 /* CATextLayer+AutoSizing.m in Sources */,
 				C50CCB631D0EA0D3002C87B7 /* PieChart.m in Sources */,
 				C50CCB5B1D0EA0D3002C87B7 /* HorizontalStackBarChart.m in Sources */,
 				C50CCB611D0EA0D3002C87B7 /* MultiLineGraphView.m in Sources */,

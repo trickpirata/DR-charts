@@ -1,3 +1,4 @@
 platform :ios, '7.0'
-
-pod 'drCharts', :path => '../../DR-charts'
+target "drChartsExample" do
+  pod 'drCharts', :path => '../../DR-charts'
+end

@@ -5,9 +5,10 @@
 //  Created by DHIREN THIRANI on 3/10/16.
 //  Copyright © 2016 Product. All rights reserved.
 //
-#import <CoreText/CoreText.h>
+
 #import "HorizontalStackBarChart.h"
 #import "Constants.h"
+#import "CATextLayer+AutoSizing.h"
 
 @interface HorizontalStackBarData : NSObject
 
@@ -136,11 +137,9 @@
     CGRect layerRect = CGPathGetBoundingBox(shapeLayer.path);
     NSAttributedString *attrString = [LegendView getAttributedString:text withFont:self.textFont];
     CGSize size = [attrString boundingRectWithSize:CGSizeMake(WIDTH(self), MAXFLOAT) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size;
-    size.height = [self boundingHeightForWidth:size.width withAttributedString:attrString];
-    
-    if (size.height < layerRect.size.height && size.width < (layerRect.size.width - OFFSET_TEXT) && self.showValueOnBarSlice) {
+    NSLog(@"\nFont - %f\nRect - %f", size.height, layerRect.size.width);
+    if (size.height < layerRect.size.height && (size.width - OFFSET_TEXT) < layerRect.size.width && self.showValueOnBarSlice) {
         CATextLayer *textLayer = [[CATextLayer alloc] init];
-        [textLayer setWrapped:YES];
         [textLayer setFont:CFBridgingRetain(self.textFont.fontName)];
         [textLayer setFontSize:self.textFontSize];
         [textLayer setFrame:CGRectMake(layerRect.origin.x + layerRect.size.width/2 - size.width/2, layerRect.origin.y + layerRect.size.height/2 - size.height/2, size.width, size.height)];
@@ -152,6 +151,7 @@
         [textLayer setShouldRasterize:YES];
         [textLayer setRasterizationScale:[[UIScreen mainScreen] scale]];
         [textLayer setContentsScale:[[UIScreen mainScreen] scale]];
+        [textLayer adjustBoundsToFit];
         [shapeLayer addSublayer:textLayer];
     }
 
@@ -160,13 +160,6 @@
     [CATransaction commit];
     
     [self.barView.layer addSublayer:shapeLayer];
-}
-
-- (CGFloat)boundingHeightForWidth:(CGFloat)inWidth withAttributedString:(NSAttributedString *)attributedString {
-    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString( (CFMutableAttributedStringRef) attributedString);
-    CGSize suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, 0), NULL, CGSizeMake(inWidth, CGFLOAT_MAX), NULL);
-    CFRelease(framesetter);
-    return suggestedSize.height;
 }
 
 - (UIBezierPath *)drawArcWithValue:(CGFloat)value{
