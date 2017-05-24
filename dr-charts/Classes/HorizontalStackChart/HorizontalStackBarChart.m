@@ -137,7 +137,7 @@
     NSAttributedString *attrString = [LegendView getAttributedString:text withFont:self.textFont];
     CGSize size = [attrString boundingRectWithSize:CGSizeMake(WIDTH(self), MAXFLOAT) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size;
     
-    if (size.height < layerRect.size.height && size.width < (layerRect.size.width - OFFSET_TEXT) && self.showValueOnBarSlice) {
+    if (size.height < layerRect.size.height && self.showValueOnBarSlice) {
         CATextLayer *textLayer = [[CATextLayer alloc] init];
         [textLayer setWrapped:YES];
         [textLayer setFont:CFBridgingRetain(self.textFont.fontName)];
