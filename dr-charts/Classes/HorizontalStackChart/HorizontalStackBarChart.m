@@ -8,7 +8,7 @@
 
 #import "HorizontalStackBarChart.h"
 #import "Constants.h"
-#import "CATextLayer+AutoSizing.h"
+#import <CoreText/CoreText.h>
 
 @interface HorizontalStackBarData : NSObject
 
@@ -151,9 +151,9 @@
         [textLayer setShouldRasterize:YES];
         [textLayer setRasterizationScale:[[UIScreen mainScreen] scale]];
         [textLayer setContentsScale:[[UIScreen mainScreen] scale]];
-        NSLog(@"\nOld - %@", NSStringFromCGRect(textLayer.frame));
-        [textLayer adjustBoundsToFit];
-        NSLog(@"\nNew - %@", NSStringFromCGRect(textLayer.frame));
+        CGRect old = textLayer.frame;
+        [self adjustBoundsToFit:textLayer];
+        NSLog(@"\nOLD - %@\nNew -  %@", NSStringFromCGRect(old), NSStringFromCGRect(textLayer.frame));
         [shapeLayer addSublayer:textLayer];
     }
 
@@ -162,6 +162,42 @@
     [CATransaction commit];
     
     [self.barView.layer addSublayer:shapeLayer];
+}
+
+- (void) adjustBoundsToFit:(CATextLayer *)layer {
+    NSAttributedString *as;
+    if([layer.string isKindOfClass:[NSAttributedString class]]) {
+        as = layer.string;
+    } else {
+        
+        UIFont *outfont;
+        CFTypeRef layerfont = layer.font;
+        if(layerfont && [(__bridge id) layerfont isKindOfClass:[NSString class]]) {
+            outfont = [UIFont fontWithName:(__bridge NSString*)layerfont size:layer.fontSize];
+        } else {
+            CFTypeID ftypeid = CFGetTypeID(layerfont);
+            if(ftypeid == CTFontGetTypeID()) {
+                CFStringRef fname = CTFontCopyPostScriptName(layerfont);
+                outfont = [UIFont fontWithName:(__bridge NSString*)fname size:layer.fontSize];
+                CFRelease(fname);
+            }
+            else if (ftypeid == CGFontGetTypeID()) {
+                CFStringRef fname = CGFontCopyPostScriptName((CGFontRef)layerfont);
+                outfont = [UIFont fontWithName:(__bridge NSString*)fname size:layer.fontSize];
+                CFRelease(fname);
+                
+            }
+            else { // It's undefined, and defaults to Helvetica
+                outfont = [UIFont systemFontOfSize:layer.fontSize];
+            }
+        }
+        
+        as = [[NSAttributedString alloc] initWithString:layer.string attributes:@{NSFontAttributeName: outfont}];
+    }
+    
+    CGRect f = layer.frame;
+    f.size = [as size];
+    layer.frame = f;
 }
 
 - (UIBezierPath *)drawArcWithValue:(CGFloat)value{
