@@ -5,7 +5,7 @@
 //  Created by DHIREN THIRANI on 3/10/16.
 //  Copyright © 2016 Product. All rights reserved.
 //
-
+#import <CoreText/CoreText.h>
 #import "HorizontalStackBarChart.h"
 #import "Constants.h"
 
@@ -136,8 +136,9 @@
     CGRect layerRect = CGPathGetBoundingBox(shapeLayer.path);
     NSAttributedString *attrString = [LegendView getAttributedString:text withFont:self.textFont];
     CGSize size = [attrString boundingRectWithSize:CGSizeMake(WIDTH(self), MAXFLOAT) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+    size.height = [self boundingHeightForWidth:size.width withAttributedString:attrString];
     
-    if (size.height < layerRect.size.height && self.showValueOnBarSlice) {
+    if (size.height < layerRect.size.height && size.width < (layerRect.size.width - OFFSET_TEXT) && self.showValueOnBarSlice) {
         CATextLayer *textLayer = [[CATextLayer alloc] init];
         [textLayer setWrapped:YES];
         [textLayer setFont:CFBridgingRetain(self.textFont.fontName)];
@@ -159,6 +160,13 @@
     [CATransaction commit];
     
     [self.barView.layer addSublayer:shapeLayer];
+}
+
+- (CGFloat)boundingHeightForWidth:(CGFloat)inWidth withAttributedString:(NSAttributedString *)attributedString {
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString( (CFMutableAttributedStringRef) attributedString);
+    CGSize suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, 0), NULL, CGSizeMake(inWidth, CGFLOAT_MAX), NULL);
+    CFRelease(framesetter);
+    return suggestedSize.height;
 }
 
 - (UIBezierPath *)drawArcWithValue:(CGFloat)value{
