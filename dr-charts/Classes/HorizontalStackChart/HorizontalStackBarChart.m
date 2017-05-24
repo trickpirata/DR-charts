@@ -153,7 +153,7 @@
         [textLayer setContentsScale:[[UIScreen mainScreen] scale]];
         CGRect old = textLayer.frame;
         [self adjustBoundsToFit:textLayer];
-        NSLog(@"\nOLD - %@\nNew -  %@", NSStringFromCGRect(old), NSStringFromCGRect(textLayer.frame));
+        NSLog(@"\nOLDs - %@\nNews -  %@", NSStringFromCGRect(old), NSStringFromCGRect(textLayer.frame));
         [shapeLayer addSublayer:textLayer];
     }
 
