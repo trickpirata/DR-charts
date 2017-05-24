@@ -137,7 +137,7 @@
     CGRect layerRect = CGPathGetBoundingBox(shapeLayer.path);
     NSAttributedString *attrString = [LegendView getAttributedString:text withFont:self.textFont];
     CGSize size = [attrString boundingRectWithSize:CGSizeMake(WIDTH(self), MAXFLOAT) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size;
-    NSLog(@"\nFont - %f\nRect - %f", size.height, layerRect.size.width);
+    
     if (size.height < layerRect.size.height && (size.width - OFFSET_TEXT) < layerRect.size.width && self.showValueOnBarSlice) {
         CATextLayer *textLayer = [[CATextLayer alloc] init];
         [textLayer setFont:CFBridgingRetain(self.textFont.fontName)];
@@ -151,7 +151,9 @@
         [textLayer setShouldRasterize:YES];
         [textLayer setRasterizationScale:[[UIScreen mainScreen] scale]];
         [textLayer setContentsScale:[[UIScreen mainScreen] scale]];
+        NSLog(@"\nOld - %@", NSStringFromCGRect(textLayer.frame));
         [textLayer adjustBoundsToFit];
+        NSLog(@"\nNew - %@", NSStringFromCGRect(textLayer.frame));
         [shapeLayer addSublayer:textLayer];
     }
 

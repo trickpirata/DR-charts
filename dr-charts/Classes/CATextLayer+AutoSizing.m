@@ -12,7 +12,6 @@
 @implementation CATextLayer (AutoSizing)
 
 - (void) adjustBoundsToFit {
-    
     NSAttributedString *as;
     if([self.string isKindOfClass:[NSAttributedString class]]) {
         as = self.string;
@@ -20,7 +19,6 @@
         
         UIFont *outfont;
         CFTypeRef layerfont = self.font;
-        
         if(layerfont && [(__bridge id) layerfont isKindOfClass:[NSString class]]) {
             outfont = [UIFont fontWithName:(__bridge NSString*)layerfont size:self.fontSize];
         } else {
