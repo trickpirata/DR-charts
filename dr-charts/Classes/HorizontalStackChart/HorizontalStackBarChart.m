@@ -142,7 +142,7 @@
     
     CGFloat fontSize = self.textFontSize;
 
-    if (size.height < layerRect.size.height && size.width < (layerRect.size.width + OFFSET_TEXT) && self.showValueOnBarSlice) {
+    if (size.height < layerRect.size.height && (size.width - OFFSET_TEXT) < layerRect.size.width && self.showValueOnBarSlice) {
         
         CATextLayer *textLayer = [[CATextLayer alloc] init];
         [textLayer setFont:CFBridgingRetain(self.textFont.fontName)];
