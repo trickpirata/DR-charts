@@ -144,7 +144,15 @@
     BOOL isFontLargeForRect = (size.width - OFFSET_TEXT) < layerRect.size.width;
 
     if (size.height < layerRect.size.height && self.showValueOnBarSlice) {
-        CGRect textFrame = !isFontLargeForRect ? CGRectMake(layerRect.origin.x + layerRect.size.width/2 - size.width/2, layerRect.origin.y - size.height, size.width, size.height) : CGRectMake(layerRect.origin.x + layerRect.size.width/2 - size.width/2, layerRect.origin.y + layerRect.size.height/2 - size.height/2, size.width, size.height);
+        CGRect textFrame = CGRectZero;
+        
+        if(!isFontLargeForRect) {
+            fontColor = self.textColor;
+            textFrame = CGRectMake(layerRect.origin.x + layerRect.size.width/2 - size.width/2, layerRect.origin.y - size.height, size.width, size.height);
+        }
+        else {
+            textFrame = CGRectMake(layerRect.origin.x + layerRect.size.width/2 - size.width/2, layerRect.origin.y + layerRect.size.height/2 - size.height/2, size.width, size.height);
+        }
         
         CATextLayer *textLayer = [[CATextLayer alloc] init];
         [textLayer setFont:CFBridgingRetain(self.textFont.fontName)];
