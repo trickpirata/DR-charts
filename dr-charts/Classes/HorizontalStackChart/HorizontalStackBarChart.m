@@ -143,7 +143,7 @@
     CGFloat fontSize = self.textFontSize;
     BOOL isFontLargeForRect = (size.width - OFFSET_TEXT) < layerRect.size.width;
 
-    if (size.height < layerRect.size.height && self.showValueOnBarSlice) {
+    if (size.height < layerRect.size.height && self.showValueOnBarSlice && value > 0.0) {
         CGRect textFrame = CGRectZero;
         
         if(!isFontLargeForRect) {
