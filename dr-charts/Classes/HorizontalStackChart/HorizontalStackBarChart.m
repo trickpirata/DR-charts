@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *count;
 @property (nonatomic, strong) UIColor *color;
+@property (nonatomic, strong) UIColor *fontColor;
 
 @end
 
@@ -66,6 +67,7 @@
     for (int i=0; i<[self.dataSource numberOfValuesForStackChart]; i++) {
         HorizontalStackBarData *chartData = [[HorizontalStackBarData alloc] init];
         [chartData setColor:[self.dataSource colorForValueInStackChartWithIndex:i]];
+        [chartData setFontColor:[self.dataSource fontColorForValueInStackChartWithIndex:i]];
         [chartData setName:[self.dataSource titleForValueInStackChartWithIndex:i]];
         [chartData setCount:[self.dataSource valueInStackChartWithIndex:i]];
         
@@ -100,13 +102,13 @@
     
     x = 0;
     for (HorizontalStackBarData *chartData in self.dataArray) {
-        [self drawPathWithValue:chartData.count.doubleValue color:chartData.color];
+        [self drawPathWithValue:chartData.count.doubleValue color:chartData.color andFontColor:chartData.fontColor];
     }
     [self addSubview:self.barView];
 }
 
 #pragma mark Draw Shape Layer
-- (void)drawPathWithValue:(CGFloat)value color:(UIColor *)color{
+- (void)drawPathWithValue:(CGFloat)value color:(UIColor *)color andFontColor:(UIColor *)fontColor{
     CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
     [shapeLayer setPath:[[self drawArcWithValue:value] CGPath]];
     [shapeLayer setStrokeColor:color.CGColor];
@@ -139,13 +141,8 @@
     CGSize size = [attrString boundingRectWithSize:CGSizeMake(WIDTH(self), MAXFLOAT) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size;
     
     CGFloat fontSize = self.textFontSize;
-    while (size.width > layerRect.size.width) {
-        fontSize -= 0.1f;
-        attrString = [LegendView getAttributedString:text withFont:[UIFont fontWithName:self.textFont.fontName size:fontSize]];
-        size = [attrString boundingRectWithSize:CGSizeMake(WIDTH(self), MAXFLOAT) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size;
-    }
-    
-    if (size.height < layerRect.size.height && size.width < layerRect.size.width && self.showValueOnBarSlice) {
+
+    if (size.height < layerRect.size.height && size.width < (layerRect.size.width + OFFSET_TEXT) && self.showValueOnBarSlice) {
         
         CATextLayer *textLayer = [[CATextLayer alloc] init];
         [textLayer setFont:CFBridgingRetain(self.textFont.fontName)];
@@ -155,7 +152,7 @@
         [textLayer setTruncationMode:kCATruncationEnd];
         [textLayer setAlignmentMode:kCAAlignmentCenter];
         [textLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
-        [textLayer setForegroundColor:[[UIColor whiteColor] CGColor]];
+        [textLayer setForegroundColor:fontColor ? [fontColor CGColor] : [[UIColor whiteColor] CGColor]];
         [textLayer setShouldRasterize:YES];
         [textLayer setRasterizationScale:[[UIScreen mainScreen] scale]];
         [textLayer setContentsScale:[[UIScreen mainScreen] scale]];
@@ -355,6 +352,7 @@
         self.count = @0;
         self.name = @"";
         self.color = [UIColor blackColor];
+        self.fontColor = [UIColor whiteColor];
     }
     return self;
 }

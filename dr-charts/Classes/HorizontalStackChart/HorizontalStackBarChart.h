@@ -24,6 +24,15 @@
 //Set Color for each item in a Stack Chart
 //Default Color is Black
 
+
+/**
+ Set color for font in a specified index
+
+ @param index index of the viewed bar
+ @return UIColor for the font index
+ */
+- (UIColor *)fontColorForValueInStackChartWithIndex:(NSInteger)index;
+
 - (NSString *)titleForValueInStackChartWithIndex:(NSInteger)index;
 //Set Title for each item in a Stack Chart
 //Default Title is Empty String
