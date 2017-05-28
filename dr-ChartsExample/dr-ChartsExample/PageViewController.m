@@ -417,7 +417,7 @@
 
 #pragma mark HorizontalStackBarChartDelegate
 - (UIColor *)fontColorForValueInStackChartWithIndex:(NSInteger)index {
-    return nil;
+    return [UIColor blackColor];
 }
 - (void)didTapOnHorizontalStackBarChartWithValue:(NSString *)value{
     NSLog(@"Horizontal Stack Chart: %@",value);

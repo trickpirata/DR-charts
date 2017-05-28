@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../dr-Charts/Classes/HorizontalStackChart/HorizontalStackBarChart.m"
-            timestampString = "517313075.118571"
+            timestampString = "517704129.876572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "-drawPathWithValue:color:andFontColor:"
             landmarkType = "7">
          </BreakpointContent>

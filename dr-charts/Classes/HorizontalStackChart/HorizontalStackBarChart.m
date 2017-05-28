@@ -141,13 +141,15 @@
     CGSize size = [attrString boundingRectWithSize:CGSizeMake(WIDTH(self), MAXFLOAT) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size;
     
     CGFloat fontSize = self.textFontSize;
+    BOOL isFontLargeForRect = (size.width - OFFSET_TEXT) < layerRect.size.width;
 
-    if (size.height < layerRect.size.height && (size.width - OFFSET_TEXT) < layerRect.size.width && self.showValueOnBarSlice) {
+    if (size.height < layerRect.size.height && self.showValueOnBarSlice) {
+        CGRect textFrame = !isFontLargeForRect ? CGRectMake(layerRect.origin.x + layerRect.size.width/2 - size.width/2, layerRect.origin.y - size.height, size.width, size.height) : CGRectMake(layerRect.origin.x + layerRect.size.width/2 - size.width/2, layerRect.origin.y + layerRect.size.height/2 - size.height/2, size.width, size.height);
         
         CATextLayer *textLayer = [[CATextLayer alloc] init];
         [textLayer setFont:CFBridgingRetain(self.textFont.fontName)];
         [textLayer setFontSize:fontSize];
-        [textLayer setFrame:CGRectMake(layerRect.origin.x + layerRect.size.width/2 - size.width/2, layerRect.origin.y + layerRect.size.height/2 - size.height/2, size.width, size.height)];
+        [textLayer setFrame:textFrame];
         [textLayer setString:[NSString stringWithFormat:@"%@",text]];
         [textLayer setTruncationMode:kCATruncationEnd];
         [textLayer setAlignmentMode:kCAAlignmentCenter];
