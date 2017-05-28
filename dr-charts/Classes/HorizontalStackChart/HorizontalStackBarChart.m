@@ -54,7 +54,7 @@
         
         self.showMarker = TRUE;
         
-        self.showCustomMarkerView = TRUE;
+        self.showCustomMarkerView = FALSE;
     }
     return self;
 }

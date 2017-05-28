@@ -19,12 +19,16 @@ typedef enum {
 
 - (void)didTapWithValuesAtX:(NSString *)xValue valuesAtY:(NSString *)yValue;
 //Returns, the touched point values
+
+@optional
+- (void)didBeganTouchOnGraph;
+
+@optional
+- (void)didEndTouchOnGraph;
+
 @end
 
 @protocol MultiLineGraphViewDataSource  <NSObject>
-
-- (NSMutableArray *)xDataForLineToBePlotted;
-//Set data for x-Axis for the Line Graph
 
 - (NSInteger)numberOfLinesToBePlotted;
 //Set number of lines to be plotted on the Line Graph
@@ -53,12 +57,16 @@ typedef enum {
 //Set Draw Points Property for each for Line on the Line Graph
 //Default is False
 
-- (NSMutableArray *)dataForLineWithLineNumber:(NSInteger)lineNumber;
+- (NSMutableArray *)dataForYAxisWithLineNumber:(NSInteger)lineNumber;
 //Set yData for Line on Line Graph When Line Type is LineDefault & LineParallelXAxis
+//If LineType is LineParallelYAxis, Set yData as empty array
+
+- (NSMutableArray *)dataForXAxisWithLineNumber:(NSInteger)lineNumber;
+//Set xData for Line on Line Graph for corresponding yData
 //If LineType is LineParallelYAxis, Set xData for the Line on Line Graph
 
 @optional
-- (UIView *)customViewForLineChartTouchWithXValue:(NSNumber *)xValue andYValue:(NSNumber *)yValue;
+- (UIView *)customViewForLineChartTouchWithXValue:(id)xValue andYValue:(id)yValue;
 //Set Custom View for touch on each item in a Line Chart
 
 @end

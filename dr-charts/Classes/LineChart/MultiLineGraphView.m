@@ -94,8 +94,6 @@
     self.lineDataArray = [[NSMutableArray alloc] init];
     self.legendArray = [[NSMutableArray alloc] init];
     
-    self.xAxisArray = [self.dataSource xDataForLineToBePlotted];
-    
     for (int i = 0 ; i < [self.dataSource numberOfLinesToBePlotted]; i++) {
         LineChartDataRenderer *lineData = [[LineChartDataRenderer alloc] init];
         [lineData setLineType:[self.dataSource typeOfLineToBeDrawnWithLineNumber:i]];
@@ -104,18 +102,20 @@
         [lineData setGraphName:[self.dataSource nameForTheLineWithLineNumber:i]];
         [lineData setFillGraph:[self.dataSource shouldFillGraphWithLineNumber:i]];
         [lineData setDrawPoints:[self.dataSource shouldDrawPointsWithLineNumber:i]];
-        if (lineData.lineType == LineParallelYAxis) {
-            [lineData setXAxisArray:[self.dataSource dataForLineWithLineNumber:i]];
-        }
-        else{
-            [lineData setYAxisArray:[self.dataSource dataForLineWithLineNumber:i]];
-        }
+        [lineData setXAxisArray:[self.dataSource dataForXAxisWithLineNumber:i]];
+        [lineData setYAxisArray:[self.dataSource dataForYAxisWithLineNumber:i]];
+        
         [self.lineDataArray addObject:lineData];
         
         LegendDataRenderer *data = [[LegendDataRenderer alloc] init];
         [data setLegendText:lineData.graphName];
         [data setLegendColor:lineData.lineColor];
         [self.legendArray addObject:data];
+        
+        if (self.xAxisArray.count < lineData.xAxisArray.count) {
+            [self.xAxisArray removeAllObjects];
+            [self.xAxisArray addObjectsFromArray:lineData.xAxisArray];
+        }
     }
 }
 
@@ -211,7 +211,7 @@
         CGPoint startPoint = CGPointMake(OFFSET_X, HEIGHT(self.graphView) - (y + OFFSET_Y));
         CGPoint endPoint = CGPointMake(WIDTH(self.graphView) - OFFSET_X, HEIGHT(self.graphView) - (y + OFFSET_Y));
         
-        NSString *numberString = [NSString stringWithFormat:@"%d",(int)value];
+        NSString *numberString = [NSString stringWithFormat:@"%.1f",value];
         
         BOOL drawGrid = TRUE;
         if (self.drawGridY) {
@@ -226,9 +226,9 @@
             }
         }
         NSAttributedString *attrString = [LegendView getAttributedString:numberString withFont:self.textFont];
-        CGSize size = [attrString boundingRectWithSize:CGSizeMake(WIDTH(self) - LEGEND_VIEW, MAXFLOAT) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+        CGSize size = [attrString boundingRectWithSize:CGSizeMake(OFFSET_X, MAXFLOAT) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size;
 
-        [self drawLineForGridWithStartPoint:startPoint endPoint:endPoint text:numberString textFrame:CGRectMake(OFFSET_PADDING, HEIGHT(self.graphView) - (y + OFFSET_Y + size.height/2), size.width , size.height) drawGrid:drawGrid];
+        [self drawLineForGridWithStartPoint:startPoint endPoint:endPoint text:numberString textFrame:CGRectMake(1, HEIGHT(self.graphView) - (y + OFFSET_Y + size.height/2), OFFSET_X - 1, size.height) drawGrid:drawGrid];
     }
 }
 
@@ -303,9 +303,12 @@
                     int x = 0;
                     int y = 0;
                     
+                    NSInteger itemIndex = [self.xAxisArray indexOfObject:[lineData.xAxisArray objectAtIndex:0]];
+                    
+                    x = itemIndex * stepX;
                     y = [[lineData.yAxisArray objectAtIndex:0] floatValue] * stepY;
                     
-                    CGPoint startPoint = CGPointMake(OFFSET_X, HEIGHT(self.graphView) - (OFFSET_Y + y));
+                    CGPoint startPoint = CGPointMake(x + OFFSET_X, HEIGHT(self.graphView) - (OFFSET_Y + y));
                     CGPoint firstPoint = startPoint;
                     if (lineData.drawPoints) {
                         [self drawPointsOnLine:startPoint withColor:lineData.lineColor];
@@ -317,7 +320,8 @@
                     
                     CGPoint endPoint;
                     for (int i = 1; i < lineData.yAxisArray.count; i++){
-                        x = i * stepX;
+                        NSInteger xIndex = [self.xAxisArray indexOfObject:[lineData.xAxisArray objectAtIndex:i]];
+                        x = xIndex * stepX;
                         y = [[lineData.yAxisArray objectAtIndex:i] floatValue] * stepY;
                         
                         endPoint = CGPointMake(x + OFFSET_X, HEIGHT(self.graphView) - ( y + OFFSET_Y));
@@ -526,6 +530,10 @@
             [self findValueForTouch:touch];
         }
     }
+    
+    if ([self.delegate respondsToSelector:@selector(didBeganTouchOnGraph)]) {
+        [self.delegate didBeganTouchOnGraph];
+    }
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -541,17 +549,29 @@
             [self findValueForTouch:touch];
         }
     }
+    
+    if ([self.delegate respondsToSelector:@selector(didBeganTouchOnGraph)]) {
+        [self.delegate didBeganTouchOnGraph];
+    }
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     if (self.showMarker || self.showCustomMarkerView) {
         [self hideMarker];
     }
+    
+    if ([self.delegate respondsToSelector:@selector(didEndTouchOnGraph)]) {
+        [self.delegate didEndTouchOnGraph];
+    }
 }
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     if (self.showMarker || self.showCustomMarkerView) {
         [self hideMarker];
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(didEndTouchOnGraph)]) {
+        [self.delegate didEndTouchOnGraph];
     }
 }
 
@@ -590,9 +610,10 @@
         if (lineData.lineType == LineDefault) {
             int x = 0;
             int y = 0;
-            
+
             for (int i = 0; i < lineData.yAxisArray.count; i++){
-                x = i * stepX;
+                NSInteger xIndex = [self.xAxisArray indexOfObject:[lineData.xAxisArray objectAtIndex:i]];
+                x = xIndex * stepX;
                 y = [[lineData.yAxisArray objectAtIndex:i] floatValue] * stepY;
                 
                 CGPoint point = CGPointMake(x + OFFSET_X, HEIGHT(self.graphView) - ( y + OFFSET_Y));
@@ -600,7 +621,7 @@
                 CGFloat distance = fabs([self distanceBetweenPoint:pointTouched andPoint:point]);
                 
                 if (distance < minDistance) {
-                    xData = [self.xAxisArray objectAtIndex:i];
+                    xData = [lineData.xAxisArray objectAtIndex:i];
                     yData = [lineData.yAxisArray objectAtIndex:i];
                     minDistance = distance;
                     closestPoint = point;
@@ -626,7 +647,7 @@
             [self.marker setHidden:YES];
             [self.marker removeFromSuperview];
             
-            self.customMarkerView = [self.dataSource customViewForLineChartTouchWithXValue:[NSNumber numberWithFloat:xData.floatValue] andYValue:[NSNumber numberWithFloat:yData.floatValue]];
+            self.customMarkerView = [self.dataSource customViewForLineChartTouchWithXValue:xData andYValue:yData];
             
             if (selectedPoint.x + WIDTH(self.customMarkerView) > self.graphScrollView.contentSize.width) {
                 selectedPoint.x -= WIDTH(self.customMarkerView);
@@ -634,10 +655,10 @@
             
             if (self.customMarkerView != nil) {
                 
-                [self.customMarkerView setFrame:CGRectMake(selectedPoint.x, OFFSET_Y - HEIGHT(self.customMarkerView), WIDTH(self.customMarkerView), HEIGHT(self.customMarkerView))];
+                [self.customMarkerView setFrame:CGRectMake(selectedPoint.x, 0, WIDTH(self.customMarkerView), HEIGHT(self.customMarkerView))];
                 [self.graphView addSubview:self.customMarkerView];
+                [self.graphView bringSubviewToFront:self.customMarkerView];
             }
-            [self.graphScrollView addSubview:self.customMarkerView];
         }
         else if (self.showMarker) {
             [self.marker setXString:selectedXData];
@@ -716,6 +737,7 @@
     [textLayer setShouldRasterize:YES];
     [textLayer setRasterizationScale:[[UIScreen mainScreen] scale]];
     [textLayer setContentsScale:[[UIScreen mainScreen] scale]];
+    [textLayer setWrapped:YES];
     [self.graphView.layer addSublayer:textLayer];
 }
 
